@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header class="ion-no-border">
 <ion-toolbar>
 
   <ion-buttons slot="start">
-    <ion-back-button defaultHref="/"></ion-back-button> 
+    <ion-back-button defaultHref="/"></ion-back-button> <!-- defaultHref="/" con eso evitamos que el botton back desaparesca al recargar y recompilar -->
   </ion-buttons>
 
-  <ion-title>{{titulo}}</ion-title>
+  <ion-title style="text-transform: capitalize"> {{titulo}} </ion-title>
 </ion-toolbar>
 </ion-header>

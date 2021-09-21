@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
- @Input() titulo = 'alert'; /* resivimos mediante un input la propiedad titulo, para que el titulo sea dinamico */
+ @Input() titulo: string; /* resivimos mediante un input la propiedad titulo, para que el titulo sea dinamico */
  
   constructor() { }
 

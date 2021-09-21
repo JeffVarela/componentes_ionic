@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
+import { DateTimePageRoutingModule } from './date-time-routing.module';
 
-import { ActionSheetPage } from './action-sheet.page';
+import { DateTimePage } from './date-time.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ActionSheetPageRoutingModule,
+    DateTimePageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ActionSheetPage]
+  declarations: [DateTimePage]
 })
-export class ActionSheetPageModule {}
+export class DateTimePageModule {}

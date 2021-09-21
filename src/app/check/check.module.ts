@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
+import { CheckPageRoutingModule } from './check-routing.module';
 
-import { ActionSheetPage } from './action-sheet.page';
+import { CheckPage } from './check.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ActionSheetPageRoutingModule,
+    CheckPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ActionSheetPage]
+  declarations: [CheckPage]
 })
-export class ActionSheetPageModule {}
+export class CheckPageModule {}

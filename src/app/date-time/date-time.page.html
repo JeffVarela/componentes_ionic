@@ -1,0 +1,52 @@
+<app-header titulo="DateTime"></app-header>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-list-header>
+            <ion-label>Datos de nacimiento</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Fechas de nacimiento</ion-label>
+            <ion-datetime placeholder="Nacimiento" display-format="YYYY MMMM DD" cancelText="cancelar!!"
+                (ngModel)="fechaNaci.toISOString()" (ionChange)="cambioFecha( $event )"></ion-datetime>
+            <!-- capturamos el valor de la fecha en el ngmodel
+                                    (ionChange) se ejecutara cuando la fecha cambie
+                                    toISOString() cambia la fecha el formato ISO 8601, despues tenemos que combertir esa fecha a una de javaScript -->
+
+        </ion-item>
+
+        <ion-list-header>
+            <ion-label>Restricciones</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Min y Max</ion-label>
+            <ion-datetime display-format="YYYY MMMM DD"
+                          placeholder="yyyy-mm-dd"
+                          min="2015-01-01" 
+                          max="2015-12-31">
+            </ion-datetime>
+        </ion-item>
+
+    </ion-list>
+
+    <ion-item>
+        <ion-label>Años</ion-label>
+        <ion-datetime display-format="YYYY"
+                      placeholder="YYYY" 
+                      min="2015" 
+                      max="2025" 
+                      value="2020"></ion-datetime>
+    </ion-item>
+
+    <!-- Custom Date da opciones y acciones personalizadas en cada boton -->
+    <ion-item>
+        <ion-label>Custom Date</ion-label>
+        <ion-datetime [pickerOptions]="customPickerOptions"
+                      [(ngModel)]="customDate"></ion-datetime>
+    </ion-item>
+
+</ion-content>

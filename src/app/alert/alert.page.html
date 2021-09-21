@@ -1,8 +1,16 @@
-<app-header></app-header>
+<app-header [titulo]="titulo || 'Alert Page'"></app-header> <!-- si el titulo no extiste que muestre alert page -->
 <!-- 
  -->
 
-<!-- defaultHref="/" con eso evitamos que el botton back desaparesca al recargar y recompilar -->
+
 <ion-content>
+
+    <ion-button (click)="presentAlert()" expand="full" color="primary">
+        Mostrar alerta
+    </ion-button>
+
+    <ion-button (click)="presentInput()" expand="full" color="secondary">
+        Mostrar input
+    </ion-button>
 
 </ion-content>

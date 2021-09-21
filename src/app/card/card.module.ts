@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActionSheetPageRoutingModule } from './action-sheet-routing.module';
+import { CardPageRoutingModule } from './card-routing.module';
 
-import { ActionSheetPage } from './action-sheet.page';
+import { CardPage } from './card.page';
 import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ActionSheetPageRoutingModule,
+    CardPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [ActionSheetPage]
+  declarations: [CardPage]
 })
-export class ActionSheetPageModule {}
+export class CardPageModule {}

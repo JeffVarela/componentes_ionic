@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>
       Componentes
@@ -12,13 +12,27 @@
       <ion-title size="large">Componentes</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+<!-- ion list -->
 
-<ion-button routerLink="/alert">
+<ion-list>
+
+  <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+    <ion-icon slot="start" [name]="c.icon"></ion-icon>  <!-- usa [] por que el name viene de una arreglo de homepage.ts -->
+    <ion-label>{{c.name}}</ion-label>
+  </ion-item>
+
+</ion-list>
+
+<!--  -->
+
+
+<!-- <ion-button routerLink="/alert">
   alert
 </ion-button>
 
 <ion-button [routerLink]="['/action-sheet']">
   action-sheet  
-</ion-button>
+</ion-button> -->
 
 </ion-content>
