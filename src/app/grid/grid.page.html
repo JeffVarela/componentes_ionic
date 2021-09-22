@@ -1,0 +1,29 @@
+<app-header titulo="grid row"></app-header>
+
+<ion-content fullscreen="true"> <!-- indicamos que haremos scroll hacia arriba --> 
+
+<!-- <ion-row>
+  <ion-col *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1], let i = index">
+    hola, item {{i + 1}}
+  </ion-col>
+</ion-row> -->
+
+<ion-grid fixed> <!-- fixed crea un margen a los lados, esto es importante para pantallas grandes -->
+  <ion-row>
+    <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+             *ngFor="let c of [1,1,1,1,1,1,1,1,1,1,1,1]">
+      <ion-card>
+        <ion-card-header>
+          <ion-img src="/assets/shapes.svg"></ion-img>
+          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+          <ion-card-title>Awesome Title</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem obcaecati unde ducimus? Minima amet deleniti aliquid qui numquam animi laborum hic, iure quas voluptatibus beatae nam quod eum omnis earum!
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

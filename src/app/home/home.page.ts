@@ -48,6 +48,36 @@ export class HomePage {
       icon: 'car-sport-outline',
       name: 'Fabs',
       redirectTo: '/fab'
+    },
+    {
+      icon: 'grid-outline',
+      name: 'Grid-Col',
+      redirectTo: '/grid'
+    },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'hammer-outline',
+      name: 'inputs-forms',
+      redirectTo: '/input'
+    },
+    {
+      icon: 'list-outline',
+      name: 'list-sliding',
+      redirectTo: '/list'
+    },
+    {
+      icon: 'reorder-two-outline',
+      name: 'list-reoder',
+      redirectTo: '/list-reoder'
+    },
+    {
+      icon: 'refresh-circle-outline',
+      name: 'Loading',
+      redirectTo: '/loading'
     }
   ];
 

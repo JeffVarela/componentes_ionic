@@ -1,0 +1,57 @@
+<app-header titulo="inputs forms"></app-header>
+
+<ion-content>
+
+<ion-list>
+
+  <ion-list-header>
+    <ion-label>Nombre: {{nombre || 'No hay Datos'}}</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" 
+               placeholder="Nombre"
+              [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<ion-list-header>
+  <ion-label>Formulario Template: valido {{formulario.valid}}</ion-label>
+</ion-list-header>
+
+<!-- la propiedad formulario en el componente input page sera de tipo ngForm (tendra todos los tributos de formulario) -->
+<form #formulario="ngForm" (ngSubmit)="onSubmiteTemplate()">
+ <ion-list>
+  
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"
+                 name="email" 
+                 placeholder="email"
+                 pattern="^[A-Z0-9a-z\._%±]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,4}$"
+                [(ngModel)]="usuario.email"
+                required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"
+                 name="password" 
+                 placeholder="contraseña"
+                [(ngModel)]="usuario.password"
+                required></ion-input>
+    </ion-item>
+   
+ </ion-list>
+
+ <!-- boton tipo submit que estara desabilitado si el formulario esta invalido -->
+<ion-button expand="full" type="submit"
+             [disabled]="formulario.invalid" >
+  enviar
+</ion-button>
+
+</form>
+
+</ion-content>
