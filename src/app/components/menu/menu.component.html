@@ -1,0 +1,29 @@
+
+<!-- aqui colocaremos el ion menu, porque este esta sobre todas las paginas, menos los medals -->
+<!-- contentId="principal" este es el id del router-outlet -->
+<ion-menu side="start" menuId="primerMenu" contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+
+      <!-- ion toggle para que cuando accedamos a una opcion del menu este se cierre -->
+
+      <ion-menu-toggle *ngFor="let c of componentes | async">
+        
+        <!-- como esto es un observable lo pasamos por | async -->
+        <ion-item  [routerLink]="c.redirectTo">
+          <ion-icon slot="start" [name]="c.icon"></ion-icon>
+          <ion-label>{{c.name}}</ion-label>
+        </ion-item>
+
+      </ion-menu-toggle>
+
+      
+
+    </ion-list>
+  </ion-content>
+</ion-menu>

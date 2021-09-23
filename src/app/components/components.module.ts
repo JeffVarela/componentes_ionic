@@ -4,13 +4,19 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MenuComponent } from './menu/menu.component';
+import { PopoverInfoComponent } from "./popover-info/popover-info.component";
 
 @NgModule({
     declarations: [
-        HeaderComponent
+        HeaderComponent,
+        MenuComponent,
+        PopoverInfoComponent
     ],
     exports: [
-        HeaderComponent
+        HeaderComponent,
+        MenuComponent,
+        PopoverInfoComponent
     ],
     imports:[
         CommonModule,

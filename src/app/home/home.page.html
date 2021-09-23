@@ -1,6 +1,22 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
+
+<!-- agregaremos un boton para mostrar el menu -->
+<ion-buttons slot="start">
+  <!-- <ion-button (click)="toggleMenu()">
+    <ion-icon slot="icon-only" name="menu"></ion-icon>
+  </ion-button> -->
+
+ <!-- otra forma de mostrar el menu --> 
+  <ion-buttons slot="start">
+    <ion-menu-button color="primary" menu="primerMenu"></ion-menu-button>
+  </ion-buttons>
+
+</ion-buttons>
+
+
+
+    <ion-title color="primary">
       Componentes
     </ion-title>
   </ion-toolbar>
@@ -17,8 +33,10 @@
 
 <ion-list>
 
-  <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
-    <ion-icon slot="start" [name]="c.icon"></ion-icon>  <!-- usa [] por que el name viene de una arreglo de homepage.ts -->
+  <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail> <!-- detail muestra una pequeña flecha que indica que se puese tocar -->
+    <ion-icon slot="start"
+              [name]="c.icon"
+              color="primary"></ion-icon>  <!-- usa [] por que el name viene de una arreglo de homepage.ts -->
     <ion-label>{{c.name}}</ion-label>
   </ion-item>
 
