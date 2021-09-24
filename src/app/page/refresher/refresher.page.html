@@ -1,0 +1,21 @@
+<app-header titulo= "refresher"></app-header>
+
+<!-- para esta clase usaremos animeted.css para crear una animacion de entrada, en global.css -->
+
+<ion-content class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <h1 *ngIf="items.length === 0"
+       class="animated fadeIn fast">pull to refresh</h1>
+
+  <ion-list *ngIf="items.length > 0"
+            class="animated fadeIn fast">
+    <ion-item *ngFor="let item of items; let i = index">
+      <ion-label>Items {{i+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

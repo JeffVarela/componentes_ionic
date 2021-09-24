@@ -78,5 +78,31 @@
       "icon": "tablet-portrait-outline",
       "name": "Popover",
       "redirectTo": "/popover"
+    },
+    {
+      "icon": "barcode-outline",
+      "name": "progressbar y range",
+      "redirectTo": "/progressbar"
+    },
+    {
+      "icon": "refresh-circle-sharp",
+      "name": "refresher",
+      "redirectTo": "/refresher"
+    },
+    {
+      "icon": "search-outline",
+      "name": "Searchbar",
+      "redirectTo": "/searchbar"
+    },
+    {
+      "icon": "copy-outline",
+      "name": "Segment",
+      "redirectTo": "/segment"
+    },
+    {
+      "icon": "albums-outline",
+      "name": "Slide",
+      "redirectTo": "/slides"
     }
+    
   ]

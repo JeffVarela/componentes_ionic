@@ -75,6 +75,26 @@ const routes: Routes = [
     path: 'popover',
     loadChildren: () => import('./popover/popover.module').then( m => m.PopoverPageModule)
   },
+  {
+    path: 'progressbar',
+    loadChildren: () => import('./page/progressbar/progressbar.module').then( m => m.ProgressbarPageModule)
+  },
+  {
+    path: 'refresher',
+    loadChildren: () => import('./page/refresher/refresher.module').then( m => m.RefresherPageModule)
+  },
+  {
+    path: 'searchbar',
+    loadChildren: () => import('./page/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
+  },
+  {
+    path: 'segment',
+    loadChildren: () => import('./page/segment/segment.module').then( m => m.SegmentPageModule)
+  },
+  {
+    path: 'slides',
+    loadChildren: () => import('./page/slides/slides.module').then( m => m.SlidesPageModule)
+  },
   
 ];
 
