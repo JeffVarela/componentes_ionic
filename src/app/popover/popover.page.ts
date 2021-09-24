@@ -25,6 +25,12 @@ export class PopoverPage implements OnInit {
 
     await popover.present()
 
+    /* procesamos el argumento que nos esta devolviendo el popover del elemento padre */
+
+    //const {data} = await popover.onDidDismiss(); //se ejecuta hasta que se cierra 
+    const {data} = await popover.onWillDismiss();  //se ejecuta antes de cerrarce
+    console.log('padre:', data);
+
   }
 
 }
