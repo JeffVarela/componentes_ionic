@@ -103,6 +103,11 @@
       "icon": "albums-outline",
       "name": "Slide",
       "redirectTo": "/slides"
+    },
+    {
+      "icon": "cog-outline",
+      "name": "Tabs",
+      "redirectTo": "/tabs/accout"
     }
     
   ]
